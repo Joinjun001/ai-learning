@@ -1,71 +1,26 @@
 # ai-learning
 
-A version-controlled 1:1 learning system for persistent learner modeling, reusable teaching skills, subject knowledge state, and session summaries.
+개인 맞춤형 **1:1 학습 시스템을 구축하고, 1년 동안 나 자신을 학습 데이터로 삼아 학습 방식의 변화를 관찰·누적하기 위한 프로젝트**다.
 
-## Core idea
+학습 과정에서 나타나는 이해도, 오개념, 선호하는 설명 방식, 과목별 진도와 피드백을 지속적으로 기록하고, 이를 바탕으로 학습 Skill과 Learner Model을 개선한다.
 
-- **ChatGPT Project**: interactive learning workspace
-- **SSalMuk Plugin**: reads/writes the working copy and performs Git operations
-- **This repository**: source of truth for learner preferences, teaching skills, subject state, and compact session history
+## 핵심 구조
 
-The prompt should stay short. Persistent state belongs in files.
+- `learner/` : 학습자의 공통 학습 성향
+- `skills/` : 반복해서 사용할 학습·설명 규칙
+- `subjects/` : 과목별 학습 상태와 지식 구조
+- `sessions/` : 각 학습 세션의 요약과 관찰 기록
+- `SYSTEM.md` : 전체 학습 시스템 운영 규칙
 
-## Session lifecycle
-
-```text
-Bootstrap
-  -> Orientation
-  -> Probe
-  -> Plan
-  -> Teach
-  -> Quiz
-  -> Persist
-  -> Commit / Push
-```
-
-## Start a session
-
-A short invocation is enough:
+## 기본 흐름
 
 ```text
-@SSalMuk-Plugin ai-learning 암호학 이어서 공부하자
+학습 시작
+→ 현재 상태 확인
+→ 설명 / 문제 풀이
+→ 이해도와 피드백 기록
+→ Learner / Skill / Subject State 갱신
+→ Git에 변화 누적
 ```
 
-The agent should then follow `BOOTSTRAP.md` and `SYSTEM.md`.
-
-## Repository structure
-
-```text
-.
-├── BOOTSTRAP.md
-├── SYSTEM.md
-├── learner/
-│   └── LEARNER.md
-├── skills/
-│   ├── common/
-│   └── subjects/
-├── subjects/
-│   └── cryptography/
-│       ├── STATE.json
-│       ├── MAP.md
-│       └── materials/
-├── sessions/
-│   ├── TEMPLATE.md
-│   └── cryptography/
-└── schemas/
-    └── state.schema.json
-```
-
-## Data policy
-
-This repository is public. Store only learning-related information that is safe to publish.
-
-Do **not** commit:
-
-- raw private conversations
-- credentials, tokens, account identifiers
-- private documents or copyrighted course PDFs
-- unrelated personal information
-- sensitive personal data
-
-Prefer compact evidence and session summaries over raw logs.
+장기적으로는 1년간 누적된 기록을 통해 **개인화된 AI 학습 시스템이 실제로 어떻게 개선되는지 관찰하는 것**이 목표다.
