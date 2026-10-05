@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schemas/state.schema.json",
+  "schema_version": 1,
+  "subject": "cryptography",
+  "status": "active",
+  "current_goal": "Bootstrap persistent course state and continue from the next requested cryptography topic.",
+  "source_materials": [],
+  "knowledge": [],
+  "needs_probe": [
+    "Current course position",
+    "Immediate target concept",
+    "Relevant prerequisite state"
+  ],
+  "next_actions": [
+    "When course material is provided, align MAP.md and STATE.json with its chapter structure.",
+    "Record evidence after the next meaningful cryptography learning session."
+  ],
+  "last_session": "2026-10-06-bootstrap"
+}

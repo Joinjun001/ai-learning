@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "state.schema.json",
+  "title": "Subject Learning State",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "subject",
+    "status",
+    "current_goal",
+    "source_materials",
+    "knowledge",
+    "needs_probe",
+    "next_actions",
+    "last_session"
+  ],
+  "properties": {
+    "schema_version": { "type": "integer", "minimum": 1 },
+    "subject": { "type": "string", "minLength": 1 },
+    "status": { "type": "string", "enum": ["inactive", "active", "paused", "complete"] },
+    "current_goal": { "type": "string" },
+    "source_materials": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "knowledge": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["concept", "level", "evidence"],
+        "properties": {
+          "concept": { "type": "string" },
+          "level": { "type": "integer", "minimum": 0, "maximum": 5 },
+          "evidence": { "type": "string" },
+          "updated_at": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "needs_probe": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "next_actions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "last_session": { "type": "string" }
+  },
+  "additionalProperties": false
+}
