@@ -3,12 +3,12 @@
 ## Standard invocation
 
 ```text
-@SSalMuk-Plugin ai-learning <subject> 이어서 공부하자
+@SSalMuk-Plugin personal-learning-lab <subject> 이어서 공부하자
 ```
 
 ## Startup procedure
 
-1. enter `/shared/ai-learning`
+1. enter `/shared/personal-learning-lab`
 2. `git pull --ff-only` when a remote is configured
 3. read `SYSTEM.md`
 4. read `learner/LEARNER.md`

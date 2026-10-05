@@ -82,3 +82,9 @@ A level should be backed by brief evidence rather than confidence alone.
 ## 6. Public repository safety
 
 This repository is public. Never persist secrets, raw private chats, private account data, private course files, or unrelated personal information. Keep learner modeling limited to publishable learning preferences and learning evidence.
+
+## 7. GitHub 문서 작성 언어
+
+- GitHub 저장소에 작성하는 README, 운영 문서, 학습 기록, Skill 문서는 기본적으로 **한국어로 작성한다.**
+- 코드, 파일명, 명령어, API 명칭, 기술 표준명처럼 영어 표기가 자연스러운 항목은 원문 표기를 유지한다.
+- 사용자가 특정 문서의 언어를 별도로 지정한 경우 그 지시를 우선한다.
